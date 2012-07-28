@@ -42,14 +42,26 @@ That's it!
 
 ## Usage
 
-With the gem installed and included in your asset manifests, you can now
-use fancybox as you normally would.
+This gem initializes fancybox based on the data attribute "data-fancybox".
+This allows you to use fancybox out of the box like this:
+
+``` <%= link_to "fancybox test", '#content_div', data: { fancybox: true } %> ```
+
+You can also do more sophisticated things with fancybox 2, such as setting
+the content type. For example, for an AJAX request:
+
+``` <%= link_to "fancybox ajax test", 'ajax_url', data: { fancybox: true, fancybox_type: 'ajax' } %> ```
+
+However, you can still use fancybox as you might otherwise wish. For example,
+based on a class:
 
 ``` javascript
 $(document).ready(function() {
   $("a.fancybox").fancybox();
 });
 ```
+
+See the fancybox Web site for more detailed usage documentation.
 
 ## More information
 
